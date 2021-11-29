@@ -14,12 +14,18 @@ video = cv2.VideoCapture(0)
 
 
 st.title('Attendence system')
+name = st.text_input ('Eter your name ')
+btn = st.button('Submit')
+if btn:
+    st.text(f"you entered name {name}")
+
 
 students =[]
 
 sidebar = st.sidebar
 
 sidebar.title('Present student list')
+
 
 for stu in present_students:
     st.sub_title(stu)
